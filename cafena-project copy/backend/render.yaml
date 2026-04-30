@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: cafena-backend
+    env: java
+    buildCommand: mvn clean package -DskipTests
+    startCommand: java -jar target/cafena-backend-1.0.0.jar
+    envVars:
+      - key: ALLOWED_ORIGINS
+        value: https://your-frontend.vercel.app
